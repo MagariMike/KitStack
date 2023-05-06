@@ -1,11 +1,16 @@
 import React from "react";
-import UserSignUp from "../googleLogin/UserSignUp";
-import UserLogin from "../googleLogin/UserLogin";
+import ProfileButton from "./ProfileButton";
+import LogoutButton from "./LogoutButton";
+import HomeButton from "./HomeButton";
+import CreateItemButton from "./CreateItemButton";
 
 function App() {
   return (
     <div className="App">
-      <UserSignUp />
+      <ProfileButton />
+      <LogoutButton />
+      <HomeButton />
+      <CreateItemButton />
     </div>
   );
 }
