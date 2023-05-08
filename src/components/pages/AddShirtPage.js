@@ -1,9 +1,9 @@
 import React from "react";
 
-const CreateItemPage = () => {
+const AddShirtPage = () => {
     return(
         <h1>Add a new Shirt</h1>
     )
 }
 
-export default CreateItemPage
+export default AddShirtPage

@@ -8,29 +8,26 @@ import CreateItemButton from "./buttons/CreateItemButton";
 
 import HomePage from "./pages/HomePage"
 import ProfilePage from "./pages/ProfilePage";
-import CreateItemPage from "./pages/CreateItemPage";
-import LogoutPage from "./pages/LogoutPage";
+import AddShirtPage from "./pages/AddShirtPage";
+import UserLogOut from "../googleLogin/UserLogOut";
+
 
 function App() {
   return (
     <BrowserRouter>
 
-
-
     <div className="App">
-    
       <Link to="/home"><HomeButton/></Link>
       <Link to="/profile"><ProfileButton/></Link>
-      <Link to="/create-item"><CreateItemButton/></Link>
+      <Link to="/add-shirt"><CreateItemButton/></Link>
       <Link to="/logout"><LogoutButton/></Link>
-
     </div>
         <Routes>
 
           <Route path="/home" element={<HomePage/>}></Route>
           <Route path="/profile" element={<ProfilePage/>}></Route>
-          <Route path="/create-item" element={<CreateItemPage/>}></Route>
-          <Route path="/logout" element={<LogoutPage/>}></Route>
+          <Route path="/add-shirt" element={<AddShirtPage/>}></Route>
+          <Route path="/logout" element={<UserLogOut/>}></Route>
     
         </Routes>
   
