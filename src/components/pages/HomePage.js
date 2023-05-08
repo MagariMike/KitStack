@@ -1,5 +1,5 @@
 import React from 'react'
-import UserSignUp from '../googleLogin/UserSignUp'
+import UserSignUp from '../../googleLogin/UserSignUp'
 
 const Home = () => {
 
