@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage"
 import ProfilePage from "./pages/ProfilePage";
 import AddShirtPage from "./pages/AddShirtPage";
 import UserLogOut from "../googleLogin/UserLogOut";
+import UserSignUp from "../googleLogin/UserSignUp";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <BrowserRouter>
 
     <div className="App">
+      <UserSignUp />
       <Link to="/home"><HomeButton/></Link>
       <Link to="/profile"><ProfileButton/></Link>
       <Link to="/add-shirt"><CreateItemButton/></Link>
