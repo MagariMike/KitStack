@@ -1,6 +1,6 @@
 import React from "react";
 import profilePic  from "../../assets/mikeProfilePic.jpeg"
-import "../../styles/profile-page.css"
+import "../../styles/pages/profile-page.css"
 import ShirtCard from "../ShirtCard";
 
 const ProfilePage = () => {
