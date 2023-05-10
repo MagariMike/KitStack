@@ -1,6 +1,6 @@
 import React from "react";
 
-function userLogOut(){
+function UserLogOut(){
     return(
        <h1>Logout</h1>
     );

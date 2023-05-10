@@ -1,20 +1,21 @@
-import React from "react";
-import App from "../components/App";
+import { useState } from "react";
+import { auth } from "../firebase/config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-function UserLogin(){
-
-    return(
-        <form>
-            <div>
-            <label htmlFor="email">email</label>
-            <input type="email" name="email" id="email" placeholder="enter your email"></input>
-        </div>
-        <div>
-            <label htmlFor="password">password</label>
-            <input type="password" name="password" id="password" placeholder="enter your password">
-            </input>
-        </div>
-        </form>
-    )
+export const UserLogin = () => {
+    const [error, setError] = useState(null)
+    
+    const login = (email, password ) => {
+      setError(null)
+      signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        console.log('user logged in:', res.user)
+      })
+      .catch((err) => {
+        setError(err.messsage)
+      })
+    
 }
-export default UserLogin;
+
+    return { error, login }
+}
