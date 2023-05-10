@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { UserLogin } from "../googleLogin/UserLogin";
 
@@ -46,4 +45,3 @@ export default function Signin() {
     </div>
   );
 }
-
