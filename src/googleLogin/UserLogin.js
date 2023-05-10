@@ -43,6 +43,6 @@ export default function Signin() {
       <button onClick={handleSubmit}>Sign In</button>
       {error && <p>{error}</p>}
     </div>
-  );
+  )
 }
 
