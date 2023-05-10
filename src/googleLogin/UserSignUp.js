@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../styles/user-signup.css"
 import KitStackLogo from "../assets/KitStack-logo.png";
@@ -5,19 +6,25 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// Initialize Firebase
-const firebaseConfig = {
-        apiKey: "AIzaSyCxibzvDmX0zxx-mSTAiU1nSsmtGsnLTIo",
-        authDomain: "kitstack-66287.firebaseapp.com",
-        projectId: "kitstack-66287",
-        storageBucket: "kitstack-66287.appspot.com",
-        messagingSenderId: "475586925445",
-        appId: "1:475586925445:web:067c9033fbe28479caaaec"
-};
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-const db = getFirestore(app);
+import { useState } from "react";
+import { auth } from "../firebase/config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
+
+export const UserSignup = () => {
+  const [error, setError] = useState(null)
+    
+    const signup = (email, password ) => {
+      setError(null)
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        console.log('user signed up:', res.user)
+      })
+      .catch((err) => {
+        setError(err.messsage)
+      })
+    }
+
 
 function UserSignUp() {
   return (
@@ -52,4 +59,7 @@ function UserSignUp() {
   );
 }
 
-export default UserSignUp;
+    return { error, signup }
+
+
+ }
