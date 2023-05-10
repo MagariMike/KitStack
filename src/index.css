@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 :root {
   --primary-font-color: #070707;
-  --button-color: #3452D1;
-  --primary-accent-color: #34D1BF;
-  --secondary-accent-color: #EFEFEF;
-  --tertiary-accent-color: #D1345B;
+  --button-color: #3452d1;
+  --primary-accent-color: #34d1bf;
+  --secondary-accent-color: #efefef;
+  --tertiary-accent-color: #d1345b;
 }
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-
-

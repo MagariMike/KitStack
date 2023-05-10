@@ -18,7 +18,6 @@ function App() {
     <BrowserRouter>
 
     <div className="App">
-      <UserSignUp />
       <Link to="/home"><HomeButton/></Link>
       <Link to="/profile"><ProfileButton/></Link>
       <Link to="/add-shirt"><CreateItemButton/></Link>

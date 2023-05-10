@@ -1,66 +1,65 @@
 .SignUpForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .SignUpForm div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
+.SignUpForm div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
 
-  .SignUpForm p {
-    font-size: 12px;
-    text-align: center;
-  }
+.SignUpForm p {
+  font-size: 12px;
+  text-align: center;
+}
 
-  .SignUpForm ::placeholder {
-    color: #989898;
-  }
-  
-  .SignUpForm form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .SignUpForm label {
-    margin: 10px 0;
-    padding-top: 20px;
-  }
+.SignUpForm ::placeholder {
+  color: #989898;
+}
 
-  .SignUpForm img {
-    width: 200px;
-    padding-top: 20px;
-    margin: auto;
-  }
-  
-  .SignUpForm input[type="text"],
-  .SignUpForm input[type="password"],
-  .SignUpForm input[type="email"],
-  .SignUpForm input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: var(--secondary-accent-color);
-    outline: none;
-    border-radius: 50px;
-  }
-  
-  .SignUpForm input[type="submit"] {
-    background-color: var( --button-color);
-    color: #fff;
-    border: none;
-    border-radius: 40px;
-    outline: none;
-    font-size: 20px;
-    padding: 10px 20px;
-  }
-  
-  .SignUpForm input[type="submit"]:hover {
-    background-color: #d1345bbc;
-  }
-  
+.SignUpForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SignUpForm label {
+  margin: 10px 0;
+  padding-top: 20px;
+}
+
+.SignUpForm img {
+  width: 200px;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.SignUpForm input[type="text"],
+.SignUpForm input[type="password"],
+.SignUpForm input[type="email"],
+.SignUpForm input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--secondary-accent-color);
+  outline: none;
+  border-radius: 50px;
+}
+
+.SignUpForm input[type="submit"] {
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.SignUpForm input[type="submit"]:hover {
+  background-color: #d1345bbc;
+}

@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const LogoutPage = () => {
-  return (
-    <h1>Logout Page</h1>
-    )
+  return <h1>Logout Page</h1>;
+};
 
-}
-
-export default LogoutPage
+export default LogoutPage;

@@ -8,11 +8,10 @@ const firebaseConfig = {
   projectId: "kitstack-66287",
   storageBucket: "kitstack-66287.appspot.com",
   messagingSenderId: "475586925445",
-  appId: "1:475586925445:web:067c9033fbe28479caaaec"
+  appId: "1:475586925445:web:067c9033fbe28479caaaec",
 };
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-export {auth, provider};
+export { auth, provider };
