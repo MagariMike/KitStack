@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import { UserLogin } from "../googleLogin/UserLogin";
+import UserLogin from "../googleLogin/UserLogin";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
