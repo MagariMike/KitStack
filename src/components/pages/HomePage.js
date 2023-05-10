@@ -1,7 +1,7 @@
 import React from 'react'
 import UserSignUp from '../../googleLogin/UserSignUp'
 import UserLogin from '../../googleLogin/UserLogin.js'
-import "../../styles/homepage.css"
+import "../../styles/pages/homepage.css"
 import "../../styles/cta-buttons.css"
 import KitStackMainImg from "../../assets/home-image.png"
 import KitStackLogo from "../../assets/KitStack-logo.png"
