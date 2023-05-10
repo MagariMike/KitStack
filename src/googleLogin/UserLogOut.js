@@ -1,9 +1,21 @@
-import React from "react";
+import { signOut } from "firebase/auth";
 
-function UserLogOut(){
-    return(
-       <h1>Logout</h1>
+const UserLogOut = () => {
+    const logout = () => {
+        signOut()
+            .then(() => {
+                console.log('user signed out');
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    };
+
+    return (
+        <button onClick={logout}>
+            Logout
+        </button>
     );
-}
+};
 
-export default UserLogout;
+export default UserLogOut;
