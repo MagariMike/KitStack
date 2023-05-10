@@ -1,19 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 
-function UserLogout() {
-  const history = useHistory();
+function userLogOut(){
+    return(
+        <div>
 
-  function handleLogout() {
-   
-    history.push("/signin");
-  }
-
-  return (
-    <div>
-      <button onClick={handleLogout}>Log out</button>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default UserLogout;
