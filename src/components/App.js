@@ -11,6 +11,7 @@ import ProfilePage from "./pages/ProfilePage";
 import AddShirtPage from "./pages/AddShirtPage";
 import UserLogOut from "../googleLogin/UserLogOut";
 import UserSignUp from "../googleLogin/UserSignUp";
+import MainPage from "./pages/MainPage";
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Route path="/home" element={<HomePage/>}></Route>
           <Route path="/profile" element={<ProfilePage/>}></Route>
           <Route path="/add-shirt" element={<AddShirtPage/>}></Route>
-          <Route path="/logout" element={<UserLogOut/>}></Route>
+          <Route path="/logout" element={<MainPage/>}></Route>
     
         </Routes>
   

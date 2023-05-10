@@ -9,7 +9,8 @@ import { getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import { auth } from "../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-
+import {Link} from "react-router-dom"
+import UserLogin from "./UserLogin";
 
 export const UserSignup = () => {
   const [error, setError] = useState(null)
@@ -31,7 +32,7 @@ function UserSignUp() {
     <div className="SignUpForm">
       <div>
         <img src={KitStackLogo} />
-        <p>Already registered? <a href="#">Log in here.</a></p>
+        <p>Already registered? <Link><UserLogin/>Log in here.</Link></p>
       </div>
       <form>
         <div>
@@ -59,7 +60,9 @@ function UserSignUp() {
   );
 }
 
-    return { error, signup }
+    // return { error, signup }
 
 
  }
+
+ export default UserSignup
