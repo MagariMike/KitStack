@@ -8,6 +8,8 @@ import { getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import { auth } from "../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import {Link} from "react-router-dom"
+import UserLogin from "./UserLogin";
 
 export const UserSignup = () => {
   const [error, setError] = useState(null);
@@ -23,15 +25,55 @@ export const UserSignup = () => {
       });
   };
 
+
+function UserSignUp() {
+  return (
+    <div className="SignUpForm">
+      <div>
+        <img src={KitStackLogo} />
+        <p>Already registered? <Link><UserLogin/>Log in here.</Link></p>
+      </div>
+      <form>
+        <div>
+          <label htmlFor="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName" placeholder="Pep" />
+        </div>
+
   function UserSignUp() {
     return (
       <div className="SignUpForm">
+
         <div>
           <img src={KitStackLogo} />
           <p>
             Already registered? <a href="#">Log in here.</a>
           </p>
         </div>
+
+        <div>
+          <label htmlFor="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="****" />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="pep@mancity.com" />
+        </div>
+        <div>
+          <label htmlFor="submit"></label>
+          <input type="submit" name="submit" id="submit" placeholder="submit" />
+        </div>
+      </form>
+    </div>
+  );
+}
+
+    // return { error, signup }
+
+
+ }
+
+ export default UserSignup
+
         <form>
           <div>
             <label htmlFor="firstName">First Name</label>
@@ -85,3 +127,4 @@ export const UserSignup = () => {
 
   return { error, signup };
 };
+

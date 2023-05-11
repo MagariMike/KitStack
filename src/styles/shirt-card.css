@@ -1,4 +1,15 @@
 .shirt-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: lightgrey;
+    padding: 10px 10px 10px 10px;
+    margin-top: 15px;
+    width: 300px;
+    height: 75px;
+    border-radius: 10px;
+    
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -8,6 +19,7 @@
   width: 300px;
   box-shadow: 5px 5px grey;
   border-radius: 10px;
+
 }
 
 #test-pic {
