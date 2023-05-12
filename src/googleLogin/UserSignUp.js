@@ -1,15 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/user-signup.css";
 import KitStackLogo from "../assets/KitStack-logo.png";
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-
-import { useState } from "react";
-import { auth } from "../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
 import UserLogin from "./UserLogin";
+import { auth } from "../firebase/config";
 
 export const UserSignup = () => {
   const [error, setError] = useState(null);
@@ -21,7 +16,7 @@ export const UserSignup = () => {
         console.log("user signed up:", res.user);
       })
       .catch((err) => {
-        setError(err.messsage);
+        setError(err.message);
       });
   };
 
@@ -38,6 +33,7 @@ export const UserSignup = () => {
           <label htmlFor="firstName">First Name</label>
           <input type="text" name="firstName" id="firstName" placeholder="Pep" />
         </div>
+
         <div>
           <label htmlFor="lastName">Last Name</label>
           <input

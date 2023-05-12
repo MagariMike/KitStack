@@ -1,41 +1,41 @@
 import React, { useState } from "react";
 import KitStackLogo from "../../assets/KitStack-logo.png";
-import "../../styles/pages/add-shirt.css"
+import "../../styles/pages/add-shirt.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 
 const AddShirtPage = () => {
-  const [club, setClub] = useState("")
-  const [shirtColour, setShirtColour] = useState("")
-  const [season, setSeason] = useState("")
-  const {image, setImage} = useState("")
+  const [club, setClub] = useState("");
+  const [shirtColour, setShirtColour] = useState("");
+  const [season, setSeason] = useState("");
+  const { image, setImage } = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  }
+  };
 
   const handleImageCapture = (e) => {
-    const selectedImage = e.target.files[0]
-    setImage(selectedImage)
-  }
-
-
+    const selectedImage = e.target.files[0];
+    setImage(selectedImage);
+  };
 
   return (
     <div className="AddShirtForm">
       <div>
-      <img src={KitStackLogo} alt="Kitstack App Logo"/>
-      <p>Create an item</p>
+        <img src={KitStackLogo} alt="Kitstack App Logo" />
+        <p>Create an item</p>
       </div>
       <form>
         <div className="ImageCapture">
-          <label><FontAwesomeIcon className="UploadImageIcon" icon={faImage} /></label>
-          <input 
-          type="file"
-          name="image"
-          id="image"
-          accept="image/*"
-          onChange={handleImageCapture}
+          <label>
+            <FontAwesomeIcon className="UploadImageIcon" icon={faImage} />
+          </label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            accept="image/*"
+            onChange={handleImageCapture}
           />
         </div>
         <div>
@@ -71,11 +71,10 @@ const AddShirtPage = () => {
             onChange={(e) => setSeason(e.target.value)}
           />
         </div>
-        
+
         <div>
           <input type="submit" name="submit" id="submit" value="Submit" />
         </div>
-      
       </form>
     </div>
   );
