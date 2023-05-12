@@ -1,0 +1,75 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin: 20px
+}
+
+.profile-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.latest-shirts-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        border-style: solid;
+        padding: 5px;
+        margin-top: 20px;
+            border-radius: 20px;
+        
+        }
+                .shirt-cards-block {
+                    padding: 20px
+                }
+        
+                .news-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        border-style: solid;
+            padding: 5px;
+            margin-top: 20px;
+            height: 100px;
+            border-radius: 20px;
+        }
+        
+        #test-pic {
+            border-radius: 50%;
+            padding: 5px;
+            margin: 10px;
+            height: 60px;
+            width: 60px;
+}
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: pink;
+  margin-top: 5%;
+}
+
+.profile-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
+  background-color: grey;
+}
+
+.latest-shirts-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+

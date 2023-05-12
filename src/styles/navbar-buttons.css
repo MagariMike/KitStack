@@ -1,20 +1,18 @@
 .NavbarButtons {
-    background-color: var(--button-color);
-    color: #ffffff;
-    padding: 15px;
-    border: none;
-    border-radius: 100%;
-  }
+  background-color: var(--button-color);
+  color: #ffffff;
+  padding: 15px;
+  border: none;
+  border-radius: 100%;
+}
 
 .NavbarButtons:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-    background-color: var(--tertiary-accent-color);
+  transform: scale(1.03);
+  cursor: pointer;
+  background-color: var(--tertiary-accent-color);
 }
-  
 
 .NavbarButtons .svg-inline--fa {
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-  }
-  
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+}

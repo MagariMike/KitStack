@@ -1,0 +1,60 @@
+.HomePage {
+  display: flex;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+.HomePage__main-img img {
+  width: 300px;
+}
+
+.dividerText {
+  color: var(--primary-accent-color);
+  margin: 0 px;
+}
+
+.dividerText::before,
+.dividerText::after {
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 2px;
+  background-color: var(--primary-accent-color);
+  vertical-align: middle;
+  margin: 10px;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  font-size: 20px;
+}
+
+.google-button > * {
+  margin: 5px;
+}
+
+.google-button:hover {
+  background-color: var(--primary-accent-color);
+}
+
+.HomePage__welcome-text {
+  font-size: 35px;
+  color: #d1345bbc;
+}
+
+.HomePage__welcome-text img {
+  width: 300px;
+  margin-top: -35px;
+  margin-bottom: 50px;
+}
