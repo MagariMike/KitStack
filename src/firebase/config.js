@@ -22,7 +22,7 @@ const writeUserData = async (userId, name, email, imageUrl) => {
   try {
     const db = getDatabase();
     const reference = ref(db, 'users/' + userId);
-    const shirtNumber = ref(db, 'users/' + userId '/shirts') 
+    const shirtNumber = ref(db, 'users/' + userId + '/shirts') 
 
     await set(reference, {
       username: name,
