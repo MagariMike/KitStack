@@ -1,17 +1,19 @@
 import React from 'react'
-import "../../styles/pages/main-page.css"
+import "../../styles/pages/home-feed.css"
 import ShirtCard from '../ShirtCard'
 import testPic from "../../assets/mikeProfilePic.jpeg"
-const mainPage = () => {
+
+const homeFeed = () => {
   return (
     <div className='wrapper'>
         <div className="profile-block">
             <img id="test-pic"src={testPic} alt="test pic"></img>
-            <h1 className='profile-tile'>My Profile</h1>
+            <h1 className='profile-tile'>Mike Brewer</h1>
             
         </div>
 
       <div className='latest-shirts-block'>
+        <h1>Latest Uploads</h1>
         <div className='shirt-cards-block'>
           <ShirtCard />
           <ShirtCard />
@@ -19,11 +21,16 @@ const mainPage = () => {
         </div>
       </div>
 
-      <div className='news-block'>
-        <h2>News</h2>
+      <div>
+        <button type="submit" name="submit" id="submit" value="Submit">
+          Logout
+        </button>
+        <button type="submit" name="submit" id="submit" value="Submit">
+          Add Shirt
+        </button>
       </div>
     </div>
   );
 };
 
-export default mainPage;
+export default homeFeed;
