@@ -12,7 +12,9 @@ const AddShirtPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(shirtColour);
   };
+  
 
   const handleImageCapture = (e) => {
     const selectedImage = e.target.files[0];
@@ -25,7 +27,7 @@ const AddShirtPage = () => {
         <img src={KitStackLogo} alt="Kitstack App Logo" />
         <p>Create an item</p>
       </div>
-      <form>
+      <form onSubmit={ handleSubmit}>
         <div className="ImageCapture">
           <label>
             <FontAwesomeIcon className="UploadImageIcon" icon={faImage} />
@@ -71,10 +73,9 @@ const AddShirtPage = () => {
             onChange={(e) => setSeason(e.target.value)}
           />
         </div>
-
-        <div>
-          <input type="submit" name="submit" id="submit" value="Submit" />
-        </div>
+        <button type="submit" name="submit" id="submit" value="Submit">
+          Submit
+        </button>
       </form>
     </div>
   );
