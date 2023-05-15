@@ -48,7 +48,7 @@
   border-radius: 50px;
 }
 
-.AddShirtForm input[type="submit"] {
+.AddShirtForm button[type="submit"] {
   background-color: var(--button-color);
   color: #fff;
   border: none;
@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 
-.AddShirtForm input[type="submit"]:hover {
+.AddShirtForm button[type="submit"]:hover {
   background-color: #d1345bbc;
 }
 
