@@ -3,18 +3,18 @@ import KitStackLogo from "../../assets/KitStack-logo.png";
 import "../../styles/pages/add-shirt.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
+import useFetch from "../../hooks/useFetch";
 
 const AddShirtPage = () => {
   const [club, setClub] = useState("");
   const [shirtColour, setShirtColour] = useState("");
   const [season, setSeason] = useState("");
-  const { image, setImage } = useState("");
+  const [image, setImage] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(shirtColour);
   };
-  
 
   const handleImageCapture = (e) => {
     const selectedImage = e.target.files[0];
@@ -27,7 +27,7 @@ const AddShirtPage = () => {
         <img src={KitStackLogo} alt="Kitstack App Logo" />
         <p>Create an item</p>
       </div>
-      <form onSubmit={ handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="ImageCapture">
           <label>
             <FontAwesomeIcon className="UploadImageIcon" icon={faImage} />
