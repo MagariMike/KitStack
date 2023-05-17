@@ -9,7 +9,7 @@ import CreateItemButton from "./buttons/CreateItemButton";
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import AddShirtPage from "./pages/AddShirtPage";
-import UserLogOut from "../googleLogin/UserLogOut";
+import UserLogin from "../googleLogin/UserLogin";
 import UserSignUp from "../googleLogin/UserSignUp";
 import HomeFeed from "./pages/HomeFeed";
 
@@ -34,7 +34,8 @@ function App() {
         <Route path="/home" element={<HomePage />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
         <Route path="/add-shirt" element={<AddShirtPage />}></Route>
-        <Route path="/logout" element={<HomeFeed />}></Route>
+        <Route path="/login" element={<UserLogin/>}></Route>
+        <Route path="/signup" element={<UserSignUp />}></Route>
       </Routes>
     </BrowserRouter>
   );
