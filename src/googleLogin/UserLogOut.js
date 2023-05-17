@@ -1,17 +1,17 @@
-import { signOut } from "firebase/auth";
+// import { signOut } from "firebase/auth";
 
-const UserLogOut = () => {
-  const logout = () => {
-    signOut()
-      .then(() => {
-        console.log("user signed out");
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  };
+// const UserLogOut = () => {
+//   const logout = () => {
+//     signOut()
+//       .then(() => {
+//         console.log("user signed out");
+//       })
+//       .catch((err) => {
+//         console.log(err.message);
+//       });
+//   };
 
-  return <button onClick={logout}>Logout</button>;
-};
+//   return <button onClick={logout}>Logout</button>;
+// };
 
-export default UserLogOut;
+// export default UserLogOut;

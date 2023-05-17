@@ -1,47 +1,54 @@
-import React, { useState } from "react";
-import { UserLogin } from "../googleLogin/UserLogin";
+import { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-export default function Signin() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { error, signin } = UserLogin();
+export default function Login() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    signin(email, password);
-  };
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        console.log(user)
+        const user = userCredential.user;
+        // ...
+        console.log(user)
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+   
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+      <form>
         <div>
           <label htmlFor="password">Password:</label>
           <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} 
             type="password"
             name="password"
             id="password"
             placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+         />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} 
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
           />
         </div>
         <div>
-          <button type="submit">Submit</button>
+        <button type="submit" onClick={Login}>login</button>
         </div>
       </form>
-      <button onClick={handleSubmit}>Sign In</button>
-      {error && <p>{error}</p>}
     </div>
   );
 }

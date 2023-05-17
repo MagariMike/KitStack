@@ -1,22 +1,32 @@
 import { useState } from "react";
-import { UserSignup } from "../googleLogin/UserSignUp";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../firebase/config';
 
 export default function Signup() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { error, signup } = UserSignup();
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    signup(email, password);
-    signup(email, password);
+  const onSubmit = async (e) => {
+    e.preventDefault()
+   
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+          // ...
+      })
+      .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          // ..
+      });
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div>
           <label htmlFor="firstName">First Name:</label>
           <input
@@ -24,9 +34,7 @@ export default function Signup() {
             name="firstName"
             id="firstName"
             placeholder="Enter your first name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
+           />
         </div>
         <div>
           <label htmlFor="lastName">Last Name:</label>
@@ -35,38 +43,36 @@ export default function Signup() {
             name="lastName"
             id="lastName"
             placeholder="Enter your last name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
+           />
         </div>
         <div>
           <label htmlFor="password">Password:</label>
           <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)} 
             type="password"
             name="password"
             id="password"
             placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+         />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
           <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} 
             type="email"
             name="email"
             id="email"
             placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div>
-          <input type="submit" name="submit" id="submit" value="Submit" />
+        <button type="submit" onClick={onSubmit}>Sign up</button>
         </div>
-        <button>sign up</button>
-        {error && <p>{error}</p>}
       </form>
     </div>
   );
 }
+
+
