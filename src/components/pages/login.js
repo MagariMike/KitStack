@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { UserLogin } from "../googleLogin/UserLogin";
 
-export default function Signin() {
+export default function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { error, signin } = UserLogin();
