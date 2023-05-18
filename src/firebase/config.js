@@ -29,7 +29,6 @@ const writeUserData = async (userId, name, email, imageUrl) => {
       profile_picture: imageUrl
     });
 
-    console.log('Data written successfully!');
   } catch (error) {
     console.error('Error writing data:', error);
   }
