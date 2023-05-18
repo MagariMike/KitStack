@@ -19,7 +19,7 @@ const provider = new GoogleAuthProvider();
 export { auth, provider };
 
 const writeUserData = async (userId, name, email, imageUrl) => {
-  try {
+  try { 
     const db = getDatabase();
     const reference = ref(db, 'users/' + userId);
     const shirtNumber = ref(db, 'users/' + userId + '/shirts') 
