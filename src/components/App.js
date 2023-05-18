@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
+import { auth } from "../firebase/config"
 
 import ProfileButton from "./buttons/ProfileButton";
 import LogoutButton from "./buttons/LogoutButton";
@@ -16,15 +17,16 @@ import HomeFeed from "./pages/HomeFeed";
 
 function App() {
   const handleSignout = () => {
-    const auth = getAuth();
-signOut(auth).then(() => {
-  // Sign-out successful.
-  console.log('user signed out')
-}).catch((error) => {
-  // An error happened.
-  console.log(error)
-});
-  }
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        console.log('user signed out');
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+  };
   return (
     <BrowserRouter>
       <div className="App">

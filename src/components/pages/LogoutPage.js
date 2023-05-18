@@ -1,15 +1,17 @@
-import { useState } from "react";
 import React from "react";
-import LogoutButton from "./logoutbutton";
+import { getAuth } from "firebase/auth";
 
+const LogoutButton = () => {
+  const auth = getAuth(); // Firebase authentication object
+  
+  const handleLogout = () => {
+    // Handle the logout functionality using Firebase
+    // ...
+  };
 
-const LogoutPage = () => {
   return (
-    <div>
-      <h1>Logout Page</h1>
-      <LogoutButton /> 
-    </div>
+    <button onClick={handleLogout}>Logout</button>
   );
 };
 
-export default LogoutPage;
+export default LogoutButton;
