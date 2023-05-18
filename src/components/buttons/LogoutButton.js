@@ -1,16 +1,29 @@
+import { useState } from "react";
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import "../../styles/navbar-buttons.css";
+import { getAuth, signOut } from "firebase/auth";
+
+const auth = getAuth();
 
 const LogoutButton = () => {
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        // User successfully logged out
+        console.log("User logged out");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
+  };
+
   return (
-    <button className="NavbarButtons">
-      <FontAwesomeIcon
-        icon={faRightFromBracket}
-        data-testid="fa-right-from-bracket-icon"
-      />
-    </button>
+    <div>
+      <button type="submit" onClick={logout}>Log out</button>
+    </div>
   );
 };
 
