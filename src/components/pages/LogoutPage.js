@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import LogoutButton from "./logoutbutton";
 
+
 const LogoutPage = () => {
   return (
     <div>
