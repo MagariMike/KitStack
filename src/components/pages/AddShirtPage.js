@@ -1,25 +1,49 @@
 import React, { useState } from "react";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore"; 
 import KitStackLogo from "../../assets/KitStack-logo.png";
 import "../../styles/pages/add-shirt.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
 import useFetch from "../../hooks/useFetch";
+import { db } from "../../firebase/config"
+import { getAuth } from "firebase/auth";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 
 const AddShirtPage = () => {
   const [club, setClub] = useState("");
   const [shirtColour, setShirtColour] = useState("");
   const [season, setSeason] = useState("");
   const [image, setImage] = useState(null);
+  const user = getAuth().currentUser
+  const userId = user ? user.uid : null;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(shirtColour);
-  };
+  const storage = getStorage();
+  const fileName = setImage;
+  const filePath = `shirt-uploads/${fileName}`
+  const storageRef = ref(storage, filePath);
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      // Add a new document in collection "cities"
+        const docRef = addDoc(collection(db, "shirt-uploads"), {
+        club: club,
+        shirtColour: shirtColour, 
+        season: season,
+        
+      });
+      console.log(shirtColour, season, club);
+
+    };
 
   const handleImageCapture = (e) => {
     const selectedImage = e.target.files[0];
     setImage(selectedImage);
   };
+
+  // 'file' comes from the Blob or File API
+  uploadBytes(storageRef, image).then((snapshot) => {
+  console.log('Uploaded a blob or file!');
+});
 
   return (
     <div className="AddShirtForm">

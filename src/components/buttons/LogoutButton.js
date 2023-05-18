@@ -1,7 +1,9 @@
 import { useState } from "react";
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
-import { auth } from "../../firebase/config";
+import "../../styles/navbar-buttons.css"
+
+const auth = getAuth();
 
 const LogoutButton = () => {
   const logout = () => {
