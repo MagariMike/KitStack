@@ -16,27 +16,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-export { auth, provider };
-
-const writeUserData = async (userId, name, email, imageUrl) => {
-  try { 
-    const db = getDatabase();
-    const reference = ref(db, 'users/' + userId);
-    const shirtNumber = ref(db, 'users/' + userId + '/shirts') 
-    await set(reference, {
-      username: name,
-      email: email,
-      profile_picture: imageUrl
-    });
-
-  } catch (error) {
-    console.error('Error writing data:', error);
-  }
-};
-
-const userId = 'yourUserId';
-const name = 'John Doe';
-const email = 'john@example.com';
-const imageUrl = 'https://example.com/profile.jpg';
-
-writeUserData(userId, name, email, imageUrl);
+export { app, auth, provider, getDatabase, ref, set, update }; // Export necessary objects and functions
