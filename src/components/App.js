@@ -44,8 +44,9 @@ function App() {
         </Link>
         <LogoutButton onClick={handleSignout} />
       </div>
-      <Routes>
-        <Route path="/home" element={<HomePage />}></Route>
+      <Routes> 
+        {/* <Route path="/home" element={<HomePage />}></Route> */}
+        <Route path="/home" element={<HomeFeed />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
         <Route path="/add-shirt" element={<AddShirtPage />}></Route>
         <Route path="/login" element={<Login/>}></Route>
