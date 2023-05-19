@@ -9,18 +9,18 @@ import { db } from "../../firebase/config"
 import { getAuth } from "firebase/auth";
 import { getStorage, ref, uploadBytes } from "firebase/storage";
 
-const AddShirtPage = () => {
+const AddShirtPage = (e) => {
   const [club, setClub] = useState("");
   const [shirtColour, setShirtColour] = useState("");
   const [season, setSeason] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
   const user = getAuth().currentUser
   const userId = user ? user.uid : null;
 
   const storage = getStorage();
-  const fileName = setImage;
-  const filePath = `shirt-uploads/${fileName}`
+  const filePath = `shirt-uploads/${image}`
   const storageRef = ref(storage, filePath);
+  console.log(image.name)
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -36,8 +36,10 @@ const AddShirtPage = () => {
     };
 
   const handleImageCapture = (e) => {
-    const selectedImage = e.target.files[0];
-    setImage(selectedImage);
+    if(handleImageCapture){
+      const selectedImage = e.target.files[0];
+      setImage(selectedImage.name);
+    }
   };
 
   // 'file' comes from the Blob or File API
