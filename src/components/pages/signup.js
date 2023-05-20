@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase/config';
+import signUp from "../../styles/user-signup.css"
 
 export default function Signup() {
   const [email, setEmail] = useState('')
@@ -25,7 +26,7 @@ export default function Signup() {
   };
 
   return (
-    <div>
+    <div className="SignUpForm">
       <form>
         <div>
           <label htmlFor="firstName">First Name:</label>
