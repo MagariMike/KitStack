@@ -58,8 +58,22 @@
   outline: none;
   font-size: 20px;
   padding: 10px 20px;
+  margin-top: 20px;
 }
 
-.SignUpForm input[type="submit"]:hover {
+.SignUpForm button:hover {
   background-color: #d1345bbc;
+}
+
+.SignUpForm button {
+  width: fit-content; 
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; 
+  outline: none;
+  border-radius: 50px;
 }
