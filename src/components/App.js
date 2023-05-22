@@ -14,6 +14,7 @@ import AddShirtPage from "./pages/AddShirtPage";
 import Login from "../components/pages/login";
 import SignUp from "../components/pages/signup";
 import HomeFeed from "./pages/HomeFeed";
+import ShirtCard from "../components/ShirtCard"
 
 function App() {
   const handleSignout = () => {
@@ -42,18 +43,22 @@ function App() {
         <Link to="/add-shirt">
           <CreateItemButton />
         </Link>
-        <LogoutButton onClick={handleSignout} />
+      <span>
+        <button onClick={handleSignout}>
+          logout
+        </button>
+        </span>
       </div>
-      <Routes> 
+      <Routes>
         {/* <Route path="/home" element={<HomePage />}></Route> */}
         <Route path="/home" element={<HomeFeed />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
         <Route path="/add-shirt" element={<AddShirtPage />}></Route>
+        <Route path="/shirt-card" element={<ShirtCard />}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
       </Routes>
     </BrowserRouter>
   );
-}
-
+  }
 export default App;
