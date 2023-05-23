@@ -15,6 +15,9 @@ import Login from "../components/pages/login";
 import SignUp from "../components/pages/signup";
 import HomeFeed from "./pages/HomeFeed";
 import ShirtCard from "../components/ShirtCard"
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 function App() {
   const handleSignout = () => {
@@ -30,7 +33,7 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App flex justify-center items-center space-x-1 my-4">
         <Link to="/home">
           <HomeButton />
         </Link>
@@ -38,14 +41,14 @@ function App() {
           <ProfileButton />
         </Link>
         <Link to="/login">
-          <ProfileButton />
+        
         </Link>
         <Link to="/add-shirt">
           <CreateItemButton />
         </Link>
       <span>
-        <button onClick={handleSignout}>
-          logout
+        <button className="w-10 h-10 rounded-full bg-blue-800 hover:bg-green-500 hover:bg-red-400 text-white text-xl" onClick={handleSignout}>
+          <FontAwesomeIcon icon={faRightFromBracket} />
         </button>
         </span>
       </div>
