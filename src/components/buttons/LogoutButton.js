@@ -1,7 +1,6 @@
 import { useState } from "react";
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
-import "../../styles/navbar-buttons.css"
 
 const auth = getAuth();
 
@@ -23,7 +22,7 @@ const LogoutButton = () => {
 
   return (
     <div>
-      <button type="submit" onClick={logout}>Log out</button>
+      <button type="submit" onClick={logout}>Logout</button>
     </div>
   );
 };
