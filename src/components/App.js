@@ -47,7 +47,7 @@ function App() {
           <CreateItemButton />
         </Link>
       <span>
-        <button className="w-10 h-10 rounded-full bg-blue-800 hover:bg-green-500 hover:bg-red-400 text-white text-xl" onClick={handleSignout}>
+        <button className="w-10 h-10 rounded-full bg-blue-800 hover:bg-green-500 text-white text-xl" onClick={handleSignout}>
           <FontAwesomeIcon icon={faRightFromBracket} />
         </button>
         </span>
