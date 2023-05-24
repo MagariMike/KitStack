@@ -25,50 +25,68 @@ export default function Signup() {
   };
 
   return (
-    <div>
-      <form>
-        <div>
-          <label htmlFor="firstName">First Name:</label>
+<div className="max-w-md mx-auto">
+      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+            First Name:
+          </label>
           <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             name="firstName"
             id="firstName"
             placeholder="Enter your first name"
-           />
+          />
         </div>
-        <div>
-          <label htmlFor="lastName">Last Name:</label>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+            Last Name:
+          </label>
           <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             name="lastName"
             id="lastName"
             placeholder="Enter your last name"
-           />
+          />
         </div>
-        <div>
-          <label htmlFor="password">Password:</label>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+            Password:
+          </label>
           <input
             value={password}
-            onChange={(e) => setPassword(e.target.value)} 
+            onChange={(e) => setPassword(e.target.value)}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="password"
             name="password"
             id="password"
             placeholder="Enter your password"
-         />
+          />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            Email:
+          </label>
           <input
             value={email}
-            onChange={(e) => setEmail(e.target.value)} 
+            onChange={(e) => setEmail(e.target.value)}
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             name="email"
             id="email"
             placeholder="Enter your email"
           />
         </div>
-        <div>
-        <button type="submit" onClick={onSubmit}>Sign up</button>
+        <div className="flex items-center justify-center">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+            onClick={onSubmit}
+          >
+            Sign up
+          </button>
         </div>
       </form>
     </div>
