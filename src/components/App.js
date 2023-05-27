@@ -14,30 +14,23 @@ import Layout from "./Layout";
 
 
 function App() {
-  // const handleSignout = () => {
-  //   signOut(auth)
-  //     .then(() => {
-  //       // Sign-out successful.
-  //       console.log('user signed out');
-  //     })
-  //     .catch((error) => {
-  //       // An error happened.
-  //       console.log(error);
-  //     });
+  
  
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout/>}>
+        <Route element={<Layout />}>
           <Route path="/home" element={<HomeFeed />}></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/add-shirt" element={<AddShirtPage />}></Route>
           <Route path="/shirt-card" element={<ShirtCard />}></Route>
-          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/logout" element={<Login/>}></Route>
         </Route>
         <Route path="/" element={<SignUp />}></Route>
+        <Route path="/login" element={<Login/>}></Route>
       </Routes>
     </BrowserRouter>
   );
   }
+
 export default App;

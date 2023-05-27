@@ -1,9 +1,16 @@
-import React from 'react'
+// import React from 'react'
+// import { Outlet } from "react-router-dom"
+// import { auth } from "../firebase/config"
 
-const AuthRequired = () => {
-  return (
-    <div>AuthRequired</div>
-  )
-}
+// const AuthRequired = () => {
+//     const isLoggedIn = auth;
+//   return (
+//     if(isLoggedIn) { 
+        
+//     }
 
-export default AuthRequired
+//     <Outlet />
+//   )
+// }
+
+// export default AuthRequired

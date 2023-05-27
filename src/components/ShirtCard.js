@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const fetchShirtData = async () => {
   const querySnapshot = await getDocs(collection(db, "shirt-uploads"));
   const data = querySnapshot.docs.map((doc) => doc.data());
-  console.log(data);
+
   return data;
 };
 const handleDelete = async (shirtId) => {
@@ -33,9 +33,9 @@ const ShirtCard = () => {
   }, []);
   return (
     <div className="flex flex-col">
-    {shirts.map((shirt) => (
+    {shirts.map((shirt, index) => (
       <div
-        key={shirt.id}
+        key={index}
         className="relative bg-gray-100 max-w-md mx-100 p-6 mb-4 h-48 bg-white rounded-lg shadow-md"
       >
         <h2 className="font-bold text-lg mb-2">Football Club: {shirt.club}</h2>
